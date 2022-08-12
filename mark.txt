@@ -1,0 +1,25 @@
+*inverter 
+
+*include model files 
+.inc cchuchu.pm 
+
+*parameters 
+.temp = k
+
+*initialize voltages 
+vg vg 0 PULSE(0 1 0 0 0 0.5 1)
+vdd vdd 0 1 
+
+*instantiate models 
+PM0 out g vdd vdd p_1v8 w=1u l=130n 
+NM0 out g 0 0 n_1v8 w=500n l=130n 
+
+.step param k 0 1 0.5 
+
+*
+.probe dc v(*) i(*) 
+.tran 0 1 1m 
+
+.plot i(vdd)
+.plot v(out)
+

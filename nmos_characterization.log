@@ -1,0 +1,7 @@
+Questionable use of curly braces in "alter @mn[l] = {$tx_len}"
+    Error: undefined symbol in: "[$tx_len]"
+Questionable use of curly braces in "alter @mp[l] = {$tx_len}"
+    Error: undefined symbol in: "[$tx_len]"
+Circuit: * gm/Id simulation
+
+Fatal Error: Multiple instances of "Alter"
